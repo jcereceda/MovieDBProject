@@ -101,7 +101,7 @@ class VistaDetallePelicula : Fragment() {
                 } else {
                     Log.e("VistaDetallePeliculas", response.errorBody()?.string() ?: "error")
                 }
-
+                data2.clear()
                 for (genero: Genre in data){
                     if (genero.id in generosPeli!!){
                         data2.add(genero)

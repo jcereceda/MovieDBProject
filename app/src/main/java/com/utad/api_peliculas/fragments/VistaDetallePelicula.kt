@@ -58,7 +58,7 @@ class VistaDetallePelicula : Fragment() {
         binding.anoPeli.text = pelicula.title + " - " + pelicula.release_date.substring(0,4)
         binding.argumento.text = pelicula.overview
         Picasso.get().load(ApiRest.URL_IMAGES + pelicula.backdrop_path).into(binding.imgPelicula)
-
+        binding.valoracion.text = "Valoracion: " + pelicula.vote_average + " / 10"
 
         rvGenerosXPelicula = binding.rvGenerosPeli
 
